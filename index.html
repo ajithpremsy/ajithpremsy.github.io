@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | [Your Name]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">Ajith M P</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="fade-in">
+            <p>Hello, I'm</p>
+            <h1>Ajith M P</h1>
+            <p class="delay-1">A passionate <span style="color:var(--accent)">Software Engineer</span>
+                building amazing things for the web.</p>
+            <a href="#contact" class="cta-button delay-2">Get In Touch</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid fade-in">
+            <p>
+                <!-- REPLACE: Add your bio here -->
+                I am Software Engineer with 7+ years
+                of experience in developing and deploying software applications. Skilled in Java, Spring Boot,
+                Microservices and Angular with a strong track record of backend development at leading organizations. My
+                career objective is to pursue a highly challenging and creative career, where I can apply my existing
+                knowledge, creativity and to acquire new skills and contribute effectively to the organization.
+            </p>
+            <p>
+                When I'm not coding, I enjoy Playing Football, Gaming, and exploring new technologies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+
+            <!-- Job 1 -->
+            <div class="experience-item fade-in">
+                <h3>Senior Software Engineer</h3>
+                <div class="company">
+                    <a href="https://experionglobal.com" target="_blank" class="company-link">
+                        <img src="experion.png" alt="Experion Technologies Logo" class="company-logo">
+                        <span>Experion Technologies</span>
+                    </a>
+                </div>
+                <div class="date">2021 - Present</div>
+                <p>
+                    <!-- REPLACE: Job description -->
+                    Led the development of key features using [Tech Stack]. Improved performance by [X]%. Collaborated
+                    with cross-functional teams to deliver projects on time.
+                </p>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="experience-item fade-in">
+                <h3>Software Developer</h3>
+                <div class="company">
+                    <a href="https://www.ust.com/" target="_blank" class="company-link">
+                        <img src="ust.png" alt="Company Logo" class="ust-company-logo">
+                        <span>UST Global</span>
+                    </a>
+                </div>
+                <div class="date">2018 - 2021</div>
+                <p>
+                    <!-- REPLACE: Job description -->
+                    Developed and maintained web applications. Implemented automated testing reducing bugs by [Y]%.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid fade-in">
+            <!-- REPLACE: Add/Remove skills -->
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">React</div>
+            <div class="skill-tag">FastAPI</div>
+            <div class="skill-tag">SQL</div>
+            <div class="skill-tag">HTML5/CSS3</div>
+            <div class="skill-tag">Git</div>
+            <div class="skill-tag">Docker</div>
+            <div class="skill-tag">AWS</div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+            <div class="experience-item fade-in">
+                <h3>[Degree Name]</h3>
+                <div class="company">
+                    <a href="#" target="_blank" class="company-link">
+                        <img src="company-icon.svg" alt="University Logo" class="company-logo">
+                        <span>[University Name]</span>
+                    </a>
+                </div>
+                <div class="date">[Graduation Year]</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div style="text-align: center;" class="fade-in">
+            <p class="delay-1" style="font-size: 1.2rem; margin-bottom: 2rem;">
+                I'm currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my
+                best to get back to you!
+            </p>
+            <a href="mailto:ajithpremsy@gmail.com" class="cta-button">Say Hello</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Designed & Built by Ajith M P</p>
+    </footer>
+
+    <script>
+        // Simple scroll reveal
+        window.addEventListener('scroll', () => {
+            const reveals = document.querySelectorAll('.fade-in');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].style.opacity = '1';
+                    reveals[i].style.transform = 'translateY(0)';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
