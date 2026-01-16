@@ -157,6 +157,38 @@ nav {
     margin-bottom: 2rem;
 }
 
+.hero-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.hero-socials a {
+    color: var(--text-secondary);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-socials a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+    background: rgba(56, 189, 248, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.hero-socials svg {
+    width: 24px;
+    height: 24px;
+}
+
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
@@ -302,21 +334,17 @@ section {
 }
 
 .company-logo {
-    width: 81px;
-    height: 24px;
+    width: 140px;
+    height: 30px;
     object-fit: contain;
-    filter: grayscale(100%) brightness(200%);
-    /* Make generic icons look unified */
-    transition: var(--transition);
+    /* transition: var(--transition); */
 }
 
 .ust-company-logo {
-    width: 35px;
-    height: 24px;
+    width: 80px;
+    height: 30px;
     object-fit: contain;
-    filter: grayscale(100%) brightness(200%);
-    /* Make generic icons look unified */
-    transition: var(--transition);
+    /* transition: var(--transition); */
 }
 
 .company-link:hover .company-logo {
@@ -333,18 +361,81 @@ section {
 
 .skill-tag {
     background: rgba(255, 255, 255, 0.05);
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 50px;
     font-size: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2px;
+}
+
+/* Brand Colors */
+.skill-java {
+    --brand-color: #f89820;
+}
+
+.skill-spring {
+    --brand-color: #6db33f;
+}
+
+.skill-microservices {
+    --brand-color: #8b5cf6;
+}
+
+.skill-python {
+    --brand-color: #3776ab;
+}
+
+.skill-fastapi {
+    --brand-color: #009688;
+}
+
+.skill-js {
+    --brand-color: #f7df1e;
+}
+
+.skill-sql {
+    --brand-color: #336791;
+}
+
+.skill-git {
+    --brand-color: #f05032;
+}
+
+.skill-aws {
+    --brand-color: #ff9900;
+}
+
+.skill-antigravity {
+    --brand-color: #d946ef;
+}
+
+.skill-tag .skill-icon {
+    color: var(--brand-color, var(--text-primary));
+    /* Fallback to text color if no brand defined */
     transition: var(--transition);
 }
 
 .skill-tag:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: var(--accent);
+    border-color: var(--brand-color, var(--accent));
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 10px var(--brand-color, transparent);
 }
+
+.skill-tag:hover .skill-icon {
+    filter: drop-shadow(0 0 5px var(--brand-color));
+}
+
+
 
 /* Footer */
 footer {
@@ -432,6 +523,30 @@ footer {
 .contact-item span {
     font-weight: 600;
     color: var(--text-primary);
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-item:hover .icon-box {
+    background: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 0 15px var(--accent-glow);
+    transform: scale(1.1);
+    border-color: var(--accent);
+}
+
+.contact-item svg {
+    width: 20px;
+    height: 20px;
 }
 
 .contact-item a {
